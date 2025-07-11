@@ -50,8 +50,8 @@ export default function useAppData() {
               }
 
               folders.push({
-                name: subEntry.name,       // actual movie/show folder name
-                category: entry.name,      // e.g., Movies or TV Shows
+                name: subEntry.name,
+                category: entry.name,
                 handle: subEntry,
                 posterUrl,
               });
@@ -202,6 +202,15 @@ export default function useAppData() {
     await loadCollections(mainDirHandle);
   };
 
+  // NEW: Reset folder selection & clear saved directory
+  const resetFolderSelection = async () => {
+    await saveDirHandle(null);  // clear saved directory handle
+    setCollections([]);
+    setCurrentCollection(null);
+    setVideos([]);
+    setLastWatched(null);
+  };
+
   return {
     collections,
     currentCollection,
@@ -213,5 +222,6 @@ export default function useAppData() {
     loadCollections,
     loadVideosInCollection,
     handleFolderSelection,
+    resetFolderSelection,  // Export the reset function
   };
 }

@@ -21,6 +21,7 @@ export default function App() {
     setLastWatched,
     loadVideosInCollection,
     handleFolderSelection,
+    resetFolderSelection,  // New function from hook
   } = useAppData();
 
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -84,6 +85,7 @@ export default function App() {
         searchOpen={searchOpen}
         setSearchOpen={setSearchOpen}
         setCategoryFilter={setCategoryFilter}
+        resetFolderSelection={resetFolderSelection}  
       />
 
       <div className="main-container" style={{ marginTop: "80px" }}>
