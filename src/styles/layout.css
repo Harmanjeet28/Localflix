@@ -1,0 +1,23 @@
+/* Main container below header */
+.main-container {
+    padding-top: 4.5rem; /* space for fixed header */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #000;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  /* Horizontal scrolling containers for shows and videos */
+  .horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .horizontal-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  

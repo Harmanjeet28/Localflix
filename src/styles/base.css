@@ -1,0 +1,10 @@
+/* Reset margins/paddings and set base font and background */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
